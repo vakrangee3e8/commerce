@@ -7,7 +7,7 @@
 
 .root:hover {
   & .productImage {
-    transform: scale(1.2625);
+    transform: scale(1.15);
   }
 
   & .header .name span,

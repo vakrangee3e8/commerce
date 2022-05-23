@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.logoText {
+	font-family: 'Sacramento', cursive !important;
+	font-size: 24px;
+	pading: 8px;
+	margin: 8px;
+	color: var(--secondary-color);
+	border: none !important;
+	outline: none !important;
+}
