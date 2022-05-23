@@ -15,8 +15,8 @@ interface Form extends HTMLFormElement {
   cardCvc: HTMLInputElement
   firstName: HTMLInputElement
   lastName: HTMLInputElement
-  company: HTMLInputElement
   streetNumber: HTMLInputElement
+  mobileNumber: HTMLInputElement
   zipCode: HTMLInputElement
   city: HTMLInputElement
   country: HTMLSelectElement
@@ -33,11 +33,12 @@ const ShippingView: FC = () => {
       type: event.target.type.value,
       firstName: event.target.firstName.value,
       lastName: event.target.lastName.value,
-      company: event.target.company.value,
+      company: "",
       streetNumber: event.target.streetNumber.value,
       apartments: event.target.streetNumber.value,
       zipCode: event.target.zipCode.value,
       city: event.target.city.value,
+      mobileNumber: event.target.mobileNumber.value,
       country: event.target.country.value,
     })
 
@@ -52,17 +53,6 @@ const ShippingView: FC = () => {
             Shipping
           </h2>
           <div>
-            <div className="flex flex-row my-3 items-center">
-              <input name="type" className={s.radio} type="radio" />
-              <span className="ml-3 text-sm">Same as billing address</span>
-            </div>
-            <div className="flex flex-row my-3 items-center">
-              <input name="type" className={s.radio} type="radio" />
-              <span className="ml-3 text-sm">
-                Use a different shipping address
-              </span>
-            </div>
-            <hr className="border-accent-2 my-6" />
             <div className="grid gap-3 grid-flow-row grid-cols-12">
               <div className={cn(s.fieldset, 'col-span-6')}>
                 <label className={s.label}>First Name</label>
@@ -74,8 +64,8 @@ const ShippingView: FC = () => {
               </div>
             </div>
             <div className={s.fieldset}>
-              <label className={s.label}>Company (Optional)</label>
-              <input name="company" className={s.input} />
+              <label className={s.label}>Mobile Number</label>
+              <input name="mobileNumber" type="tel" className={s.input} />
             </div>
             <div className={s.fieldset}>
               <label className={s.label}>Street and House Number</label>
@@ -89,7 +79,7 @@ const ShippingView: FC = () => {
             </div>
             <div className="grid gap-3 grid-flow-row grid-cols-12">
               <div className={cn(s.fieldset, 'col-span-6')}>
-                <label className={s.label}>Postal Code</label>
+                <label className={s.label}>Pin Code</label>
                 <input name="zipCode" className={s.input} />
               </div>
               <div className={cn(s.fieldset, 'col-span-6')}>
@@ -100,7 +90,7 @@ const ShippingView: FC = () => {
             <div className={s.fieldset}>
               <label className={s.label}>Country/Region</label>
               <select name="country" className={s.select}>
-                <option>Hong Kong</option>
+                <option>India</option>
               </select>
             </div>
           </div>

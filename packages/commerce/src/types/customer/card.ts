@@ -16,6 +16,7 @@ export interface CardFields {
   zipCode: string
   city: string
   country: string
+  mobileNumber: string
 }
 
 export type CustomerCardTypes = {

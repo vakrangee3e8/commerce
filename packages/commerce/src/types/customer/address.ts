@@ -13,6 +13,7 @@ export interface AddressFields {
   zipCode: string
   city: string
   country: string
+  mobileNumber: string
 }
 
 export type CustomerAddressTypes = {

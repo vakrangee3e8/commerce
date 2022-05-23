@@ -60,10 +60,10 @@ const CheckoutSidebarView: FC = () => {
           </a>
         </Link>
 
-        <PaymentWidget
+        { /*<PaymentWidget
           isValid={checkoutData?.hasPayment}
           onClick={() => setSidebarView('PAYMENT_VIEW')}
-        />
+        /> */ }
         <ShippingWidget
           isValid={checkoutData?.hasShipping}
           onClick={() => setSidebarView('SHIPPING_VIEW')}
@@ -91,10 +91,6 @@ const CheckoutSidebarView: FC = () => {
             <span>{subTotal}</span>
           </li>
           <li className="flex justify-between py-1">
-            <span>Taxes</span>
-            <span>Calculated at checkout</span>
-          </li>
-          <li className="flex justify-between py-1">
             <span>Shipping</span>
             <span className="font-bold tracking-wide">FREE</span>
           </li>
@@ -108,7 +104,7 @@ const CheckoutSidebarView: FC = () => {
           <Button
             type="submit"
             width="100%"
-            disabled={!checkoutData?.hasPayment || !checkoutData?.hasShipping}
+            disabled={!checkoutData?.hasShipping}
             loading={loadingSubmit}
           >
             Confirm Purchase
