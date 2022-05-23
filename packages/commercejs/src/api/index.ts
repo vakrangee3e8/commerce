@@ -20,7 +20,7 @@ const config: CommercejsConfig = {
   cartCookie: CART_COOKIE,
   cartCookieMaxAge: 2592000,
   customerCookie: CUSTOMER_COOKIE,
-  apiToken: '',
+  apiToken: 'pk_43419ec0942c5ba64052ee589d4d7e8f25589d0bbb328',
   fetch: createGraphqlFetcher(() => getCommerceApi().getConfig()),
   sdkFetch,
 }
