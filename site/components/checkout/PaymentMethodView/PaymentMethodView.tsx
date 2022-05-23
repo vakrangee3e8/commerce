@@ -41,6 +41,7 @@ const PaymentMethodView: FC = () => {
       zipCode: event.target.zipCode.value,
       city: event.target.city.value,
       country: event.target.country.value,
+      mobileNumber: event.target.mobileNumber.value
     })
 
     setSidebarView('CHECKOUT_VIEW')
@@ -88,6 +89,10 @@ const PaymentMethodView: FC = () => {
             <div className={s.fieldset}>
               <label className={s.label}>Company (Optional)</label>
               <input name="company" className={s.input} />
+            </div> 
+            <div className={s.fieldset}>
+              <label className={s.label}>Mobile Number</label>
+              <input name="mobileNumber" className={s.input} />
             </div>
             <div className={s.fieldset}>
               <label className={s.label}>Street and House Number</label>
