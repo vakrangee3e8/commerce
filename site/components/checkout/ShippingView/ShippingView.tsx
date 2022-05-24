@@ -33,7 +33,7 @@ const ShippingView: FC = () => {
       // type: event.target.type.value,
       firstName: event.target.firstName.value,
       lastName: event.target.lastName.value,
-      company: "",
+      company: event.target.mobileNumber.value,
       streetNumber: event.target.streetNumber.value,
       apartments: event.target.streetNumber.value,
       zipCode: event.target.zipCode.value,
