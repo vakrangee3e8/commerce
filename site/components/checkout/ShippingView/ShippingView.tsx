@@ -30,7 +30,7 @@ const ShippingView: FC = () => {
     event.preventDefault()
 
     await addAddress({
-      type: event.target.type.value,
+      // type: event.target.type.value,
       firstName: event.target.firstName.value,
       lastName: event.target.lastName.value,
       company: "",
