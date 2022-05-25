@@ -41,7 +41,7 @@ const PaymentMethodView: FC = () => {
       zipCode: event.target.zipCode.value,
       city: event.target.city.value,
       country: event.target.country.value,
-      mobileNumber: event.target.mobileNumber.value
+      mobileNumber: event.target.mobileNumber.value,
     })
 
     setSidebarView('CHECKOUT_VIEW')
@@ -89,7 +89,7 @@ const PaymentMethodView: FC = () => {
             <div className={s.fieldset}>
               <label className={s.label}>Company (Optional)</label>
               <input name="company" className={s.input} />
-            </div> 
+            </div>
             <div className={s.fieldset}>
               <label className={s.label}>Mobile Number</label>
               <input name="mobileNumber" className={s.input} />
@@ -117,7 +117,7 @@ const PaymentMethodView: FC = () => {
             <div className={s.fieldset}>
               <label className={s.label}>Country/Region</label>
               <select name="country" className={s.select}>
-                <option>Hong Kong</option>
+                <option>India</option>
               </select>
             </div>
           </div>

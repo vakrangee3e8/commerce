@@ -25,11 +25,12 @@ const CheckoutSidebarView: FC = () => {
       event.preventDefault()
 
       await onCheckout()
-      clearCheckoutFields()
+      // clearCheckoutFields()
       setLoadingSubmit(false)
       refreshCart()
       closeSidebar()
-    } catch {
+    } catch (error: any) {
+      console.error(`Error occured while submitting the form: ${error}`)
       // TODO - handle error UI here.
       setLoadingSubmit(false)
     }
@@ -60,10 +61,10 @@ const CheckoutSidebarView: FC = () => {
           </a>
         </Link>
 
-        { /*<PaymentWidget
+        {/* <PaymentWidget
           isValid={checkoutData?.hasPayment}
           onClick={() => setSidebarView('PAYMENT_VIEW')}
-        /> */ }
+        /> */}
         <ShippingWidget
           isValid={checkoutData?.hasShipping}
           onClick={() => setSidebarView('SHIPPING_VIEW')}

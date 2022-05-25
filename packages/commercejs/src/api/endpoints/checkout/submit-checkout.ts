@@ -24,9 +24,11 @@ const submitCheckout: CheckoutEndpoint['handlers']['submitCheckout'] = async ({
     'getShippingOptions',
     checkoutToken,
     {
-      country: 'US',
+      country: 'IN',
     }
   )
+
+  console.log(`--- Shipping Methods: `, shippingMethods, ` ---`)
 
   const shippingMethodToUse = shippingMethods?.[0]?.id || ''
   const checkoutData = normalizeTestCheckout({

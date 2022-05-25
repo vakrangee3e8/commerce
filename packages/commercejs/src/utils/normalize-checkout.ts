@@ -46,15 +46,15 @@ export function normalizeTestCheckout({
       name: fullName,
       street,
       town_city: townCity,
-      country: 'US',
+      country: 'IN',
     },
     billing: {
       name: fullName,
       street,
       town_city: townCity,
       postal_zip_code: postalCode,
-      county_state: 'California',
-      country: 'US',
+      county_state: 'Rājasthān',
+      country: 'IN',
     },
     fulfillment: {
       shipping_method: shippingOption,
